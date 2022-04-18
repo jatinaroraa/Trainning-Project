@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="firstapp">
+  <!-- <style src="./home.css"></style> -->
+  <link rel="stylesheet" href="./home.css" />
+  <link
+    href="//netdna.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script> -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>angular app</title>
+  </head>
+  <body ng-controller="maincnontrol">
+    <!-- <input type="text" ng-model="quantity" />
+    <p ng-repeat="x in vm.name | filter:search">{{x|lname}}</p> -->
+    <!-- <input type="number" ng-model="price" /> -->
+    <!-- <p ng-repeat="x in name">{{x}}</p> -->
+    <!-- <p ng-bind="price"></p> -->
+    <!-- <p>{{quantity+price}}</p> -->
+    <!-- <p ng-repeat="x in vm.post">id:{{x.id}}</p> -->
+    <!-- <controller></controller> -->
+    <!-- <p style="color: black">homepage</p> -->
+    <!-- <div class="home">
+      <p>
+        <a
+          href="#!/"
+          style="color: white; text-decoration-line: none; font-size: 20px"
+        >
+          Dashboard</a
+        >
+      </p>
+      <p>
+        <a
+          href="#!/metrices"
+          style="color: white; text-decoration-line: none; font-size: 20px"
+        >
+          Metrices</a
+        >
+      </p>
+      <p>
+        <a
+          href="#!/history"
+          style="color: white; text-decoration-line: none; font-size: 20px"
+        >
+          History</a
+        >
+      </p>
+      <p ng-click="logout()">
+        <a
+          href="#!/login"
+          style="color: white; text-decoration-line: none; font-size: 20px"
+        >
+          logout</a
+        >
+      </p>
+
+      <p></p>
+    </div> -->
+
+    <!-- <p ng-bind="mail"></p> -->
+    <div ui-view></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.0/angular.js"></script>
+    <script src="./controllers/app.js" charset="UTF-8"></script>
+    <script src="./controllers/postcontroller.js" charset="UTF-8"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.0/angular-route.min.js"
+      charset="UTF-8"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.min.js"
+      integrity="sha512-HdDqpFK+5KwK5gZTuViiNt6aw/dBc3d0pUArax73z0fYN8UXiSozGNTo3MFx4pwbBPldf5gaMUq/EqposBQyWQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookies/1.7.0/angular-cookies.js"
+      integrity="sha512-2O0BBq6trLonQvBNRSW+WQs5/OcUp7O9LH85Z9i4chCnyhzJBxg8qK+AJJgGnAZyX/kRMXA4+KwbTOr55Nuj/Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="//morgul.github.io/ui-bootstrap4/ui-bootstrap-tpls-3.0.6.js"></script>
+
+    <script src="controllers/login.js"></script>
+    <script src="controllers/about.js"></script>
+    <script src="controllers/register.js"></script>
+    <script src="controllers/dashboard.js"></script>
+    <script src="controllers/addOrder.js"></script>
+    <script src="controllers/modal.js"></script>
+    <script src="controllers/modalAddOrder.js"></script>
+    <script src="controllers/metrices.js"></script>
+    <script src="controllers/orderStatus.js"></script>
+    <script src="controllers/history.js"></script>
+    <script src="services/authenticate.js"></script>
+    <script src="services/order.js"></script>
+    <script src="factory/totalOrders.js"></script>
+
+    <script src="factory/modalFunc.js"></script>
+    <script src="services/table.js"></script>
+    <script src="services/bulkChange.js"></script>
+
+    <script src="./filters/statusFilter.js"></script>
+    <script src="./modules/authinterceptor.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="factory/socket.js"></script>
+
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"
+      integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+
+    <!-- <script src="http://localhost:3000/socket.io/socket.io.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<div>
+  <div class="modal-header">
+    <h3 class="modal-title">Order Details</h3>
+  </div>
+  <div class="modal-body">
+    <div class="orderdetailModal" ng-repeat="data in items">
+      <p>{{data.name}}</p>
+      <p>{{data.price}}</p>
+      <p>{{data.qty}}</p>
+    </div>
+    <div>
+      <p>Gross Amount : {{totalAmount.amount - totalAmount.totalTax}}</p>
+      <h4>Taxes</h4>
+      <p id="tax" ng-repeat="tax in totalAmount.taxes">
+        {{tax.name}}: {{tax.totalTax}}Rs
+      </p>
+      <h6>Total Tax : {{totalAmount.totalTax}}Rs</h6>
+      <h5>Total Amount:{{totalAmount.amount}}Rs</h5>
+      <p>Table No:{{tableno}}</p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="cancel()">
+      Cancel
+    </button>
+  </div>
+</div>

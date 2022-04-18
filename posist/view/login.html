@@ -1,0 +1,49 @@
+<!-- <h1>login page</h1> -->
+<div class="login">
+  <div
+    style="
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 70vh;
+      justify-content: center;
+    "
+    class="loginform"
+    METHOD="POST"
+  >
+    <input
+      type="text"
+      ng-model="mail"
+      style="width: 20vw; margin-top: 5px; height: 30px"
+      placeholder="Enter Email"
+    />
+
+    <input
+      type="password"
+      ng-model="password"
+      placeholder="Enter Password"
+      style="width: 20vw; margin-top: 5px; height: 30px"
+    />
+
+    <button
+      type="button"
+      class="btn btn-primary loginbtn"
+      ng-click="login(mail,password)"
+    >
+      Login
+    </button>
+    <div class="loginpara">
+      <a href="http://127.0.0.1:5500/posist/index.html#!/register"
+        ><p>create an account</p></a
+      >
+    </div>
+    <div>
+      <a
+        class="orderStatusbutton"
+        href="http://127.0.0.1:5500/posist/index.html#!/orderstatus"
+      >
+        <p>Order Status</p></a
+      >
+    </div>
+  </div>
+</div>

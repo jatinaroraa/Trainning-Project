@@ -1,0 +1,56 @@
+<div class="row orderData" ng-init="init()">
+  <div class="col-2 orderCard" ng-repeat="data in data">
+    <div class="orderBlock">
+      <p id="customerName">{{data.name}}</p>
+      <p id="customerName">{{data.number}}</p>
+
+      <!-- <p>quantity:</p> -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        ng-click="modal(data.items,data.amount,data.tableNo,data)"
+      >
+        Orders
+      </button>
+    </div>
+    <div
+      class="btn-group mb-2"
+      style="justify-content: center"
+      uib-dropdown
+      dropdown-append-to-body
+    >
+      <button
+        id="btn-append-to-body"
+        type="button"
+        class="btn btn-primary"
+        uib-dropdown-toggle
+      >
+        {{data.status}}
+        <span class="caret"></span>
+      </button>
+      <div
+        class="dropdown-menu"
+        uib-dropdown-menu
+        role="menu"
+        aria-labelledby="btn-append-to-body"
+      >
+        <!-- <a href="#" ng-click="status(1)" class="dropdown-item">preparing</a> -->
+        <a ng-click="status('preparing',data._id)" class="dropdown-item"
+          >preparing</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pagination">
+  <ul
+    uib-pagination
+    total-items="bigTotalItems"
+    ng-model="bigCurrentPage"
+    ng-change="pageChanged()"
+    max-size="maxSize"
+    class="pagination-sm"
+    boundary-links="true"
+    force-ellipses="true"
+  ></ul>
+</div>

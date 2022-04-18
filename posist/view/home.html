@@ -1,0 +1,37 @@
+<div class="home">
+  <p>
+    <a
+      ui-sref=".dashboard"
+      style="color: white; text-decoration-line: none; font-size: 20px"
+    >
+      Dashboard</a
+    >
+  </p>
+  <p>
+    <a
+      ui-sref=".metrices"
+      style="color: white; text-decoration-line: none; font-size: 20px"
+    >
+      Metrices</a
+    >
+  </p>
+  <p>
+    <a
+      ui-sref=".history"
+      style="color: white; text-decoration-line: none; font-size: 20px"
+    >
+      History</a
+    >
+  </p>
+  <p ng-click="logout()">
+    <a
+      ui-sref="login"
+      style="color: white; text-decoration-line: none; font-size: 20px"
+    >
+      logout</a
+    >
+  </p>
+
+  <p></p>
+</div>
+<div ui-view></div>

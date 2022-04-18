@@ -1,0 +1,187 @@
+<div class="modal-header" ng-init="init()">
+  <h3 class="modal-title">Add Orders</h3>
+</div>
+<div class="modal-body">
+  <uib-tabset active="active">
+    <uib-tab
+      index="$index + 1"
+      ng-repeat="data in totaldata"
+      heading="{{data.supercategory.name}}"
+    >
+      <uib-tabset type="pills">
+        <uib-tab
+          ng-repeat="subcategory in data.categoryData"
+          heading="{{subcategory.category.name}}"
+        >
+          <div class="modalBody" ng-repeat="menu in subcategory.menu">
+            <div class="orderTitle">
+              <p>{{menu.name}}</p>
+
+              <div>
+                <p ng-repeat="tags in menu.tags">[ {{tags}} ]</p>
+              </div>
+
+              <p id="orderPrice">{{menu.price}}</p>
+            </div>
+            <div class="quantity">
+              <!-- <div class="quantityAddOrder">
+                <p
+                  id="minusplus"
+                  ng-click="minus(menu.qty,menu.name,subcategory.category.name)"
+                >
+                  -
+                </p>
+                <p>{{menu.qty}}</p>
+                <p
+                  id="minusplus"
+                  ng-click="plus(menu.qty,menu.name,subcategory.category.name)"
+                >
+                  +
+                </p>
+              </div> -->
+              <button
+                class="btn btn-primary"
+                type="button"
+                ng-click="orders(menu.name,menu.price,menu.qty,menu.taxes,menu.tags,subcategory.category.name,menu._id)"
+              >
+                Add
+              </button>
+            </div>
+          </div></uib-tab
+        >
+      </uib-tabset>
+    </uib-tab>
+  </uib-tabset>
+  <div>
+    <h3 class="modal-title">Recommend items</h3>
+
+    <div class="modalBody" ng-repeat="recommend in recommend track by $index">
+      <div class="orderTitle">
+        <p>{{recommend.name}}</p>
+
+        <div>
+          <p ng-repeat="tags in recommend.tags">[ {{tags}} ]</p>
+        </div>
+
+        <p id="orderPrice">{{recommend.price}}</p>
+      </div>
+      <div class="quantity">
+        <div class="quantityAddOrder">
+          <p
+            id="minusplus"
+            ng-click="minus(recommend.qty,recommend.name,data.category.name)"
+          >
+            -
+          </p>
+          <p>{{recommend.qty}}</p>
+          <p
+            id="minusplus"
+            ng-click="plus(recommend.qty,recommend.name,data.category.name)"
+          >
+            +
+          </p>
+        </div>
+        <button
+          class="btn btn-primary"
+          type="button"
+          ng-click="orders(recommend.name,recommend.price,recommend.qty,recommend.taxes,recommend.tags)"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h3 class="modal-title">Total Orders</h3>
+    <hr />
+    <div ng-repeat="order in totalOrders">
+      <div class="totalOrders">
+        <div class="quantityAddOrder">
+          <p id="minusplus" ng-click="minus(order.qty,order.name)">-</p>
+          <p>{{order.qty}}</p>
+          <p id="minusplus" ng-click="plus(order.qty,order.name)">+</p>
+        </div>
+        <!-- <p>{{order.qty}}x</p> -->
+        <div>
+          <p ng-repeat="tags in order.tags">[ {{tags}} ]</p>
+        </div>
+        <p>{{order.name}}</p>
+        <p>{{order.price}}</p>
+        <button
+          type="button"
+          class="btn btn-primary"
+          ng-click="deleteItem(order.name,order.qty)"
+        >
+          Delete
+        </button>
+      </div>
+      <hr />
+    </div>
+  </div>
+  <div>
+    <h3 class="modal-title">Billing</h3>
+    <div>
+      <input
+        id="billbtn"
+        type="text"
+        ng-model="name"
+        placeholder="Enter Customer's Name"
+      />
+      <input
+        id="billbtn"
+        type="text"
+        ng-model="number"
+        placeholder="Enter Customer's Number"
+      />
+      <h3>Table No</h3>
+
+      <div class="tableList">
+        <p
+          ng-repeat="table in table"
+          ng-click="tablefunction(table.tableNo,null,false)"
+        >
+          {{table.tableNo}}
+        </p>
+      </div>
+      <h3 ng-show="update">Filled table</h3>
+
+      <div ng-show="update" class="filledList">
+        <p
+          ng-repeat="table in filledTable"
+          ng-click="tablefunction(table.tableNo,table.id,tableNo,true)"
+        >
+          {{table.tableNo}}
+        </p>
+      </div>
+      <p>Gross Amount : {{totalAmount.amount - totalAmount.totalTax}}</p>
+      <h4>Taxes</h4>
+      <p ng-repeat="tax in totalAmount.taxes">{{tax.name}}:{{tax.totalTax}}</p>
+      <p>total Tax : {{totalAmount.totalTax}}</p>
+
+      <p>Total Amount:{{totalAmount.amount}}</p>
+      <p>Table No:{{tableNo}}</p>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      ng-show="finish"
+      class="btn btn-primary"
+      type="button"
+      ng-click="sendData(name,number,totalAmount.amount,tableNo,totalAmount.taxes,totalAmount.totalTax)"
+    >
+      Finish
+    </button>
+    <button
+      ng-show="update"
+      class="btn btn-primary"
+      type="button"
+      ng-click="updateOrders(name,number,totalAmount.amount,data.tableNo,tableNo,totalAmount.taxes,totalAmount.totalTax)"
+    >
+      Update
+    </button>
+    <button class="btn btn-warning" type="button" ng-click="cancelOrder()">
+      Cancel
+    </button>
+  </div>
+  <!-- <div></div> -->
+</div>

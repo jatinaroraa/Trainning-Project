@@ -1,0 +1,438 @@
+a {
+  font-style: none;
+  text-decoration-line: none;
+}
+.homeNav {
+  display: flex;
+  flex-direction: row;
+}
+.homeNav p {
+  font-weight: 600;
+  font-size: 30px;
+  margin-left: 5vw;
+}
+.home {
+  display: flex;
+  flex-direction: row;
+  /* width: 20vw; */
+  /* justify-content: space-between; */
+  color: white;
+  /* margin-left: 10vw; */
+  background-color: black;
+  padding: 10px 50px;
+}
+.home p {
+  margin: 10px 30px;
+}
+#orderId {
+  background-color: burlywood;
+  padding: 0px 5px;
+}
+#customerName {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.orderCard {
+  width: 15vw;
+  /* height: 10vh; */
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  margin: 5px;
+
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.row {
+  padding: 10px;
+}
+.btn {
+  width: fit-content;
+}
+.orderBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.editBtn {
+  margin: 3px 0px;
+  color: #212529;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+.addOrder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 20px;
+  /* background-color: blue; */
+}
+/* dashboard  */
+.bulk-btn {
+  color: #fff;
+  background-color: red;
+  border-color: #007bff;
+  margin-top: 20px;
+}
+/* modalAddOrder */
+.filledList {
+  display: flex;
+  flex-direction: row;
+}
+.filledList p {
+  cursor: pointer;
+  margin: 2px 6px;
+  padding: 5px 8px;
+  color: #fff;
+  background-color: red;
+  border-color: #007bff;
+}
+.tableList {
+  display: flex;
+  flex-direction: row;
+}
+.tableList p {
+  cursor: pointer;
+  margin: 2px 6px;
+  padding: 5px 8px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.modalBody {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px;
+  /* justify-content: space-between; */
+}
+#minusplus {
+  border: 1px solid black;
+  height: fit-content;
+  padding: 0px 5px;
+  cursor: pointer;
+  margin: 0px 5px;
+}
+.quantityAddOrder {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 20px;
+}
+
+.totalOrders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#billbtn {
+  width: 100%;
+  margin: 10px 0px;
+  /* border: 1px solid grey; */
+}
+.quantity {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  /* justify-content: space-between; */
+}
+.orderTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+/* .orderData {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+} */
+/* order detail modal  */
+.orderdetailModal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+/* login page */
+.loginbtn {
+  width: fit-content;
+  /* padding: 5px 5vw; */
+  width: 20vw;
+  margin: 10px;
+}
+.loginform {
+  border: 1px solid grey;
+  width: 40vw;
+  height: 40vh;
+  margin: 5vh 0px;
+}
+.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.loginpara {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-start; */
+  width: 50%;
+}
+.loginpara p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.loginpara a:hover {
+  text-decoration: none;
+}
+.orderStatusbutton p {
+  /* background-color: blue; */
+  border: 1px solid black;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.orderStatusbutton {
+  cursor: pointer;
+  /* text-decoration: none; */
+}
+.orderStatusbutton:hover {
+  text-decoration: none;
+}
+
+/* register page  */
+.register {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.registerform {
+  border: 1px solid grey;
+  width: 40vw;
+  height: 40vh;
+  margin: 5vh 0px;
+}
+
+/* metrices */
+.mainblock {
+  margin-left: 20px;
+}
+#tax {
+  margin: 0px;
+}
+.metrices {
+  display: flex;
+  flex-direction: row;
+}
+.metrices p {
+  margin: 10px 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.visitonce {
+  display: flex;
+  flex-direction: row;
+}
+.visitoncedata {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.timeItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 20vw;
+  margin: 5px 10px;
+}
+.headerItemtime {
+  font-size: 20px;
+  font-weight: 600;
+}
+.metricesData {
+  display: flex;
+  flex-direction: column;
+}
+.metricesTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 30px;
+  margin: 0px;
+  /* background-color: red; */
+  /* color: white; */
+  border: 1px solid black;
+}
+.metricesAnalysis {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px;
+  /* color: white; */
+}
+.metricesAnalysis h3 {
+  /* text-align: center; */
+  padding: 5px 10px;
+  width: 50vw;
+  height: 20vh;
+  /* background-color: rgb(0, 128, 0, 0.7); */
+  margin: 0px 0px;
+  border: 1px solid rgb(128, 128, 128);
+}
+.visitOnce {
+  margin: 0px;
+  /* background-color: skyblue; */
+  border: 1px solid black;
+}
+.pieChart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timeItemMain {
+  display: flex;
+  flex-direction: column;
+  /* color: white; */
+  /* background-color: rgb(137, 124, 221); */
+  padding: 0px 20px;
+}
+.taxesData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40vw;
+}
+.taxesData p {
+  width: 15vw;
+}
+.tax {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  justify-content: space-between;
+}
+
+.taxName {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+
+.taxData {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between;
+   */
+}
+.taxData p {
+  width: 17vw;
+}
+.taxsum {
+  margin-left: 20px;
+}
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70vw;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+/* order status  */
+
+.orderStatus {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 90vh;
+}
+.orderStatusbox {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  border: 1px solid black;
+  margin: 10vh 20vw 0vh 20vw;
+}
+.orderstatusheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 5px;
+}
+.typearea {
+  width: 80%;
+  /* margin: 0vh 20vw 10vh 20vw; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.typearea textarea {
+  width: 100%;
+  height: 130px;
+}
+
+.send {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 10px 10px;
+}
+.send p {
+  margin: 0px;
+  text-transform: capitalize;
+}
+.mess-send {
+  background-color: wheat;
+  color: black;
+  padding: 10px 5px;
+  width: 30vw;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
+  /* width: 70vw; */
+  background-color: whitesmoke;
+}
+/* received */
+.received {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+}
+.received p {
+  margin: 0px;
+  text-transform: capitalize;
+}
+.mess-received {
+  color: white;
+  background-color: blue;
+  padding: 10px 5px;
+  width: 30vw;
+  margin: 0px;
+}
+/* paggination  */
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

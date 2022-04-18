@@ -1,0 +1,134 @@
+<!-- <select>
+  <option value="volvo">Default</option>
+
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select> -->
+
+<div ng-init="getorder()">
+  <div class="addOrder">
+    <button type="button" class="btn btn-primary" ng-click="openAddOrder()">
+      Add Order
+    </button>
+    <div>
+      <div
+        class="btn-group"
+        uib-dropdown
+        is-open="status.isopen"
+        ng-show="enable"
+      >
+        <button
+          id="single-button"
+          type="button"
+          class="btn bulk-btn"
+          uib-dropdown-toggle
+        >
+          Bulk change <span class="caret"></span>
+        </button>
+        <ul
+          class="dropdown-menu"
+          uib-dropdown-menu
+          role="menu"
+          aria-labelledby="single-button"
+        >
+          <li role="menuitem" ng-click="changeInBulk('preparing')">
+            <a>preparing</a>
+          </li>
+          <li role="menuitem" ng-click="changeInBulk('prepared')">
+            <a>prepared</a>
+          </li>
+          <li role="menuitem" ng-click="changeInBulk('settled')">
+            <a>settled</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="btn bulk-btn" ng-click="enableBulk()">
+        Enable BulK
+      </button>
+    </div>
+  </div>
+  <div class="row orderData">
+    <!-- {{data}} -->
+    <div class="col-2 orderCard" ng-repeat="datas in data">
+      <!-- <p id="orderId">{{data._id}}</p> -->
+      <div class="orderBlock">
+        <input
+          type="checkbox"
+          ng-click="checkbox(datas)"
+          ng-show="enable"
+          class="check2"
+        />
+
+        <p id="customerName">{{datas.name}}</p>
+        <p id="customerName">{{datas.number}}</p>
+        <!-- <p id="customerName">Table No= {{datas.tableNo}}</p> -->
+
+        <!-- <p>quantity:</p> -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          ng-click="modal(datas.items,datas.amount,datas.tableNo,data)"
+        >
+          Orders
+        </button>
+        <!-- openAddOrder -->
+        <button
+          type="button"
+          class="editBtn btn"
+          ng-click="bigModal(datas._id,datas.items,datas.amount,datas.name,datas.number,datas.tableNo,datas.taxes,datas.totalTax)"
+        >
+          Edit
+        </button>
+      </div>
+
+      <div
+        class="btn-group mb-2"
+        style="justify-content: center"
+        uib-dropdown
+        dropdown-append-to-body
+      >
+        <button
+          ng-click="value(datas.status)"
+          id="btn-append-to-body"
+          type="button"
+          class="btn btn-primary"
+          uib-dropdown-toggle
+        >
+          {{datas.status }}
+          <span class="caret"></span>
+        </button>
+        <div
+          class="dropdown-menu"
+          uib-dropdown-menu
+          role="menu"
+          aria-labelledby="btn-append-to-body"
+        >
+          <!-- <a href="#" ng-click="status(1)" class="dropdown-item">preparing</a> -->
+          <a ng-click="swapStatus(datas.status,datas._id)" class="dropdown-item"
+            >{{stat2}}</a
+          >
+          <a
+            ng-click="status('settled',datas._id,datas.tableNo)"
+            class="dropdown-item"
+            >Settled</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- demo bootstrap  -->
+</div>
+<div class="pagination">
+  <ul
+    uib-pagination
+    total-items="bigTotalItems"
+    ng-model="bigCurrentPage"
+    ng-change="pageChanged()"
+    max-size="maxSize"
+    class="pagination-sm"
+    boundary-links="true"
+    force-ellipses="true"
+  ></ul>
+</div>
